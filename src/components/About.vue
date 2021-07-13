@@ -15,7 +15,7 @@ export default {
          }
     },
     mounted () {
-        axios.get('http://dev.onwalk.net:8000/v1/hello')
+        axios.get('http://dev.onwalk.net:8000/v1/get')
         .then( response => { 
 		this.info = response.data.message;
                 console.log(response);
