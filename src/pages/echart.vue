@@ -8,7 +8,7 @@ import { onMounted,toRefs, ref,reactive } from 'vue';
 export default {
   setup(){
     let state = reactive({
-      xAxisData:['浩星','妍仔','哆啦a梦','李强','王颖','老王'],
+      xAxisData:['clusterA','clusterB','clusterC','clusterD','clusterE','clusterF'],
       yAxisData:[4,22,1,11,23,11],
       yAxisData1:[1,1,1,1,1,1],
       echart: ref(),
