@@ -27,13 +27,15 @@ npm install vue-router@next vuex@next
 
 ## 引用组件版本
 
-"axios": "^0.21.1",
-"ant-design-vue": "^2.2.8",
-"echarts": "^5.2.0",
-"vue": "^3.0.0",
-"vue-router": "^4.0.10",
-"vuex": "^4.0.2",
-"qs": "^6.10.1"
+开发环境: Nodejs v14.18.1，Npm 6.14.15
+
+* "axios": "^0.21.1",
+* "ant-design-vue": "^2.2.8",
+* "echarts": "^5.2.0",
+* "vue": "^3.0.0",
+* "vue-router": "^4.0.10",
+* "vuex": "^4.0.2",
+* "qs": "^6.10.1"
 
 ## Vue 3 + Vite
 
