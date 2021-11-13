@@ -15,7 +15,7 @@
           </a-layout-header>
           <a-layout-content>
           <!--行内样式记得写成class-->
-              Content
+            <router-view />
           </a-layout-content>
           <a-layout-footer >
              Pan Haitao ©2021 Created by Xz

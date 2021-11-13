@@ -37,17 +37,17 @@ const NavData = [
                         NavID: 101,
                         Icons: "",
                         Title: "添加集群",
-                        Path: "/UserInfo",
+                        Path: "/about",
                     }, {
                         NavID: 102,
                         Icons: "",
                         Title: "集群联邦",
-                        Path: "/CompanyInfo",
+                        Path: "/home",
                     },{
                         NavID: 103,
                         Icons: "",
                         Title: "删除集群",
-                        Path: "/TeamInfo",
+                        Path: "/button",
                     },
 
                 ]
