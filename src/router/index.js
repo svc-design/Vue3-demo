@@ -22,6 +22,11 @@ const routes = [
 		path: '/button',
 		name: 'Button',
 		component: () => import("../pages/button.vue")
+	},
+	{
+		path: '/echart',
+		name: 'Echart',
+		component: () => import("../pages/echart.vue")
 	}
 ]
 

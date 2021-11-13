@@ -111,19 +111,19 @@ const NavData = [
                         NavID: 501,
                         Icons: "",
                         Title: "计算资源",
-                        Path: "/Card",
+                        Path: "/echart",
                     },
                     {
                         NavID: 502,
                         Icons: "",
                         Title: "存储资源",
-                        Path: "/Card",
+                        Path: "/echart",
                     },
                     {
                         NavID: 503,
                         Icons: "",
                         Title: "网络资源",
-                        Path: "/Card",
+                        Path: "/echart",
                     }]
             }
          ]
