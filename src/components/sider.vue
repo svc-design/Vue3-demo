@@ -125,6 +125,31 @@ const NavData = [
                         Title: "网络资源",
                         Path: "/echart",
                     }]
+            },
+            {
+                NavID: 600,
+                Icons:"feature",
+                Title:"功能",
+                Path:"",
+                Child: [
+                    {
+                        NavID: 601,
+                        Icons: "",
+                        Title: "标签页",
+                        Path: "/tabs",
+                    },
+                    {
+                        NavID: 602,
+                        Icons: "",
+                        Title: "存储资源",
+                        Path: "/echart",
+                    },
+                    {
+                        NavID: 603,
+                        Icons: "",
+                        Title: "网络资源",
+                        Path: "/echart",
+                    }]
             }
          ]
 </script>

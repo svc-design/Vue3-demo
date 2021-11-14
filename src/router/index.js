@@ -27,6 +27,11 @@ const routes = [
 		path: '/echart',
 		name: 'Echart',
 		component: () => import("../pages/echart.vue")
+	},
+	{
+		path: '/tabs',
+		name: 'tabs',
+		component: () => import("../pages/antd-tabs.vue")
 	}
 ]
 
