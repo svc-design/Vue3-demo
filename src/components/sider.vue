@@ -152,4 +152,14 @@ const NavData = [
                     }]
             }
          ]
+
+
+function navClick() {
+    console.log('11')
+    return '22';
+}
+
+defineExpose({
+    navClick
+})
 </script>
