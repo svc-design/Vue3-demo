@@ -24,7 +24,8 @@ export default {
   name: "AntdTabs",
   components: {
     Button,
-    About
+    About,
+    Echart
   },
   data() {
     const panes = [
