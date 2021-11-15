@@ -17,7 +17,8 @@
 <script>
 
 import Button from './button.vue';
-import About  from './about.vue'
+import About  from './about.vue';
+import Echart  from './echart.vue';
 
 export default {
   name: "AntdTabs",
@@ -27,8 +28,9 @@ export default {
   },
   data() {
     const panes = [
-      { title: 'Tab 1', content: 'Button', key: '1' },
-      { title: 'Tab 2', content: 'About', key: '2' },
+      { title: 'Button', content: 'Button', key: '1' },
+      { title: 'Echart', content: 'Echart', key: '2' },
+      { title: 'About',  content: 'About',  key: '3' }
     ];
     return {
       activeKey: panes[0].key,
