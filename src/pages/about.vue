@@ -2,27 +2,42 @@
     <div>
         {{ info }}
     </div>
+    <div>
+        {{ count }}
+    </div>
+    <a-button @click="ADD" type="primary">ADD+1</a-button>
+    <a-button @click="ADDS" type="primary">ADD+10</a-button>
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
-    name: "Home",
+    name: "About",
     data() {
             return {
-                info: null
+              info: this.$Store.state.name
+         }
+    }
+}
+</script>
+
+<script>
+export default {
+    name: "About",
+    data() {
+            return {
+              count: this.$Store.state.count
          }
     },
-    mounted () {
-        axios.get('http://dev.onwalk.net:8000/v1/get')
-        .then( response => { 
-		this.info = response.data.message;
-                console.log(response);
-	}).catch( error => { 
-		console.log(error);
-	});
-    }
+    methods: {
+      ADD() {
+        this.$Store.commit('ADD')
+        console.log(this.$Store.state.count)
+      },
+      ADDS() {
+        this.$Store.commit('ADDS',10)
+        console.log(this.$Store.state.count)
+      }
+  }
 }
 </script>
 
