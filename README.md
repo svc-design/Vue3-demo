@@ -4,6 +4,7 @@
 
 npm init @vitejs/app
 npm install vue-router@next vuex@next
+npm install @types/node -D
 
 ## 子目录说明
 
@@ -29,13 +30,24 @@ npm install vue-router@next vuex@next
 
 开发环境: Nodejs v14.18.1，Npm 6.14.15
 
-* "axios": "^0.21.1",
-* "ant-design-vue": "^2.2.8",
-* "echarts": "^5.2.0",
-* "vue": "^3.0.0",
-* "vue-router": "^4.0.10",
-* "vuex": "^4.0.2",
-* "qs": "^6.10.1"
+```
+  "dependencies": {
+    "axios": "^0.21.1",
+    "echarts": "^5.2.0",
+    "element-plus": "^1.2.0-beta.3",
+    "qs": "^6.10.1",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "node-sass": "^4.14.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "vite": "^2.6.4"
+```
 
 ## Vue 3 + Vite
 

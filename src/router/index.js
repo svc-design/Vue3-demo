@@ -1,37 +1,41 @@
-import {
-	createRouter,
-	createWebHistory 
-} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../pages/home.vue'
-import About from '../pages/about.vue'
+import Layout from '@/components/Index.vue'
+import About from '@/pages/about.vue'
+import Button from '@/pages/button.vue'
 
-
-const routes = [
+export const routes = [
 	{
 		path: '/',
-		name: 'Home',
-		component: Home
+		name: '主页',
+		component: Layout
 	},
 	{
-		path: '/about',
-		name: 'About',
-		component: About
-	},
-	{
-		path: '/button',
-		name: 'Button',
-		component: () => import("../pages/button.vue")
+		path: '/dashbord',
+		name: '主页',
+		component: Layout,
+		children: [
+			{
+			path: '/about',
+		    name: 'About',
+		    component: About
+		    },
+			{
+				path: '/button',
+				name: 'Button',
+				component: Button
+			}
+	   ]
 	},
 	{
 		path: '/echart',
 		name: 'Echart',
-		component: () => import("../pages/echart.vue")
+		component: () => import("@/pages/echart.vue")
 	},
 	{
 		path: '/tabs',
-		name: 'tabs',
-		component: () => import("../pages/antd-tabs.vue")
+		name: 'Tabs',
+		component: () => import("@/pages/atabs.vue")
 	}
 ]
 

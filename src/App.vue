@@ -1,8 +1,8 @@
 
 <template>
-  <Layout />
+  <AppMain />
 </template>
 
 <script setup>
-import Layout from './components/layout.vue'
+import AppMain from '@/components/Index.vue'
 </script>

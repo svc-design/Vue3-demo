@@ -1,26 +1,26 @@
-import { createStore } from 'vuex'
+import Vuex from 'vuex'
 
-const store = createStore({  
+const store = {  
   state () {  
     return {      
       count: 1,
-      name: 'global_state'    
+      name: 'global_state'
     }  
   },  
-  mutations: 
-  {    add (state) {
+  mutations: { 
+    add(state) {
           state.count++    
-       },
-       ADDS(state, num) {
+      },
+    adds(state, num) {
         state.count += num 
       }  
   },
   actions: {
-    // 异步操作mutations （变相让mutation支持异步）
   },
   modules: {
-    // vuex 模块化
   }
-})
+}
 
-export default store
+export default new Vuex.Store({
+  store
+})
