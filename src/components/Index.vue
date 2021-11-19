@@ -8,12 +8,13 @@
       </el-aside>
       <el-container>
         <!-- 顶部 -->
-        <el-header height="50px">header
+        <el-header height="50px">
           <Navbar @switchSidebar="switchSidebar" />
+          <ScrollTabs/>
         </el-header>
         <!-- 主页面 -->
         <el-main>
-          <router-view />
+          <AppMain />
         </el-main>
       </el-container>
     </el-container>
@@ -23,12 +24,16 @@
 <script>
 import Navbar from '@/components/Navbar.vue'
 import Sidebar from '@/components/Sidebar.vue'
+import AppMain from '@/components/AppMain.vue'
+import ScrollTabs from '@/components/ScrollTabs.vue'   
 
 export default {
   name: 'Layout',
   components: {
+    AppMain,
     Sidebar,
-    Navbar
+    Navbar,
+    ScrollTabs
   },
   data() {
     return {
@@ -61,6 +66,9 @@ export default {
     i {
       font-size: 22px;
     }
+  }
+  .el-main {
+    margin-top: 32px;
   }
 }
 </style>

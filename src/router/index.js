@@ -8,22 +8,35 @@ export const routes = [
 	{
 		path: '/',
 		name: '主页',
-		component: Layout
+		component: Layout,
+		meta: {
+			title: '主页',
+			affix: true // 加入保护
+		  }
 	},
 	{
 		path: '/dashbord',
 		name: '主页',
 		component: Layout,
+		meta: {
+			title: 'Dashbord'
+		},
 		children: [
 			{
 			path: '/about',
 		    name: 'About',
-		    component: About
+		    component: About,
+			meta: {
+				title: 'About'
+			  }
 		    },
 			{
 				path: '/button',
 				name: 'Button',
-				component: Button
+				component: Button,
+				meta: {
+					title: 'Button'
+				  }
 			}
 	   ]
 	},

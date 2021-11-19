@@ -2,15 +2,15 @@
   <div class="navbar">
     <!-- sidebar抽屉按钮 -->
     <div class="sidebar-switch" @click="switchSidebar">
-      <i :class="open ? 'el-icon-s-fold':'el-icon-s-unfold'" />
+      <button :class="open ? 'el-icon-s-fold':'el-icon-s-unfold'" />
     </div>
     <!-- breadcrumb -->
     <el-breadcrumb separator="/">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+      <el-breadcrumb-item><a href="/">Dashbord</a></el-breadcrumb-item>
+      <el-breadcrumb-item v-for="item in levelList" :key="item.path">{{ item.meta.title }}</el-breadcrumb-item>
     </el-breadcrumb>
+
     <!-- nav menu -->
     <el-dropdown class="nav-menu">
       <div class="avatar-wrapper">
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import route from '@/router'
 
 export default {
   name: 'Navbar',
@@ -38,13 +39,32 @@ export default {
       default: true
     }
   },
+  data() {
+    return {
+      levelList: null
+    }
+  },
+  watch: {
+    $route() {
+      this.getBreadcrumb()
+    }
+  },
+  created() {
+    this.getBreadcrumb()
+  },
   methods: {
     switchSidebar() {
       this.$emit('switchSidebar')
+    },
+    getBreadcrumb() {
+      // 获取路由对应title   && 存在返回右边，不存在返回左边
+      const matched = this.$route.matched.filter(item => item.meta && item.meta.title)
+      this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
     }
   }
 }
 </script>
+
 <style lang="scss">
 .navbar {
   height: 50px;
