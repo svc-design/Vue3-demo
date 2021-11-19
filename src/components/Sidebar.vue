@@ -23,7 +23,7 @@
             </el-menu-item>
         </div>
       </el-menu>
-    </el-scrollbar >
+    </el-scrollbar>
   </el-col>
  </el-row> 
 </template>
@@ -64,7 +64,7 @@ const MenuData = routes
       overflow-x: hidden !important;
     }
 
-    .el-scrollbar__bar.is-vertical {
+    .el-scrollbar__bar.is-vertical { 
       right: 0px;
     }
 

@@ -15,9 +15,10 @@ const store = {
         state.count += num 
       }  
   },
-  actions: {
+  getters: {
   },
   modules: {
+
   }
 }
 

@@ -8,29 +8,41 @@
       </el-aside>
       <el-container>
         <!-- 顶部 -->
-        <el-header height="50px">
-          <div class="sidebar-switch" @click="open = !open">
-            <i :class="open ? 'el-icon-s-fold':'el-icon-s-unfold'" />
-          </div>
-          <el-col>header</el-col>
+        <el-header height="50px">header
+          <Navbar @switchSidebar="switchSidebar" />
         </el-header>
         <!-- 主页面 -->
-        <router-view />
-        <el-main>主页面</el-main>
+        <el-main>
+          <router-view />
+        </el-main>
       </el-container>
     </el-container>
   </el-row>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue'
 import Sidebar from '@/components/Sidebar.vue'
 
 export default {
   name: 'Layout',
   components: {
-    Sidebar
+    Sidebar,
+    Navbar
+  },
+  data() {
+    return {
+      open: true
+    }
+  },
+  methods: {
+    switchSidebar() {
+      this.open = !this.open
+    }
   }
 }
+
+
 </script>
 
 <style lang="scss" scoped>
