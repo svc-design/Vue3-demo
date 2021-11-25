@@ -2,9 +2,10 @@
 
 ## 初始化项目
 
+```
 npm init @vitejs/app
 npm install vue-router@next vuex@next
-npm install @types/node -D
+```
 
 ## 子目录说明
 
@@ -41,11 +42,8 @@ npm install @types/node -D
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.7",
     "@vitejs/plugin-vue": "^1.9.3",
-    "node-sass": "^4.14.0",
-    "sass": "^1.43.4",
-    "sass-loader": "^12.3.0",
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
     "vite": "^2.6.4"
 ```
 
