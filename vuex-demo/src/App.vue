@@ -9,7 +9,7 @@
 <script>
 import { mapState } from 'vuex'
 import { mapMutations } from 'vuex'
-import state from './store'
+import Store from './store'
 
 export default {
   name: 'VueX',
