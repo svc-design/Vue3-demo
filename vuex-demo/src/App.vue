@@ -15,6 +15,7 @@
  </div>
 
    <button @click='add'> add+1 </button> 
+   <button @click='adds'> add+10 </button> 
 </template>
 
 <script>
@@ -38,7 +39,10 @@ export default {
   methods: {
     ...mapMutations([
       'add',
-     ]) 
+     ]), 
+    adds(){
+      this.$store.commit('adds',10)
+    }
   }
 } 
 </script>
