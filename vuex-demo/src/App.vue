@@ -1,15 +1,25 @@
 <template>
- <el-row>
-   <el-col>{{ name }}</el-col>
-   <el-col>{{ count }} </el-col>
-   <el-button @click='add'> add+1 </el-button> 
- </el-row>
+ <div>
+   <p>this->name {{ this.$store.state.name }}</p>
+   <p>this->count {{ this.$store.state.count }}</p>
+ </div>
+
+ <div>
+   <p>mapName {{ name }}</p>
+   <p>mapCount {{ count }}</p>
+ </div>
+
+ <div>
+   <p>computed->name {{ get_value_name }}</p>
+   <p>computed->count {{ get_vaule_count }}</p>
+ </div>
+
+   <button @click='add'> add+1 </button> 
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import { mapMutations } from 'vuex'
-import Store from './store'
 
 export default {
   name: 'VueX',
@@ -17,12 +27,17 @@ export default {
     ...mapState([
       'name',
       'count' 
-    ])
+    ]),
+   get_value_name() {
+     return this.$store.state.name   
+   },
+   get_vaule_count() {
+     return this.$store.state.count   
+   } 
   },
   methods: {
     ...mapMutations([
       'add',
-      'adds'
      ]) 
   }
 } 
