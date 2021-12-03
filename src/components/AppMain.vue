@@ -13,11 +13,6 @@
 
 <script>
 export default {
-  name: 'AppMain',
-  computed: {
-    cachedViews() {
-      return this.$store.getters.cachedViews
-    }
-  }
+  name: 'AppMain'
 }
 </script>

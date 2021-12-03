@@ -18,7 +18,6 @@ const store = {
   getters: {
   },
   modules: {
-
   }
 }
 

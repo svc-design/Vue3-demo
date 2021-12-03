@@ -5,6 +5,8 @@
 ```
 npm init @vitejs/app
 npm install vue-router@next vuex@next
+npm install @types/node -D
+node-sass build fix: include/node/v8-internal.h，将remove_cv_t改为remove_cv
 ```
 
 ## 子目录说明

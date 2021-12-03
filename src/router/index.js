@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Layout from '@/components/Index.vue'
+//import Layout from '@/components/Layout.vue'
 import About from '@/pages/about.vue'
 import Button from '@/pages/button.vue'
 
@@ -11,12 +11,12 @@ export const routes = [
 		component: Layout,
 		meta: {
 			title: '主页',
-			affix: true // 加入保护
+			affix: true
 		  }
 	},
 	{
 		path: '/dashbord',
-		name: '主页',
+		name: 'Doashbord',
 		component: Layout,
 		meta: {
 			title: 'Dashbord'

@@ -15,7 +15,7 @@
  </div>
 
   <div>
-    <p>getters->name {{ getters_name }}</p>
+    <p>getters->name {{ this.$store.getters.name }}</p>
     <p>getters->count {{ getters_count }}</p>
   </div>
 

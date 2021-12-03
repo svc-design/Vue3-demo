@@ -12,8 +12,8 @@
     </el-breadcrumb>
 
     <!-- nav menu -->
-    <el-dropdown class="nav-menu">
-      <div class="avatar-wrapper">
+    <el-dropdown >
+      <div>
         <img :src="'https://upload.jianshu.io/users/upload_avatars/20351000/e6ae7017-e428-4e0d-819b-59c1ae535835.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240'">
         <span>Vue3</span>
         <i class="el-icon-caret-bottom" />
@@ -32,76 +32,6 @@
 import route from '@/router'
 
 export default {
-  name: 'Navbar',
-  props: {
-    open: {
-      type: Boolean,
-      default: true
-    }
-  },
-  data() {
-    return {
-      levelList: null
-    }
-  },
-  watch: {
-    $route() {
-      this.getBreadcrumb()
-    }
-  },
-  created() {
-    this.getBreadcrumb()
-  },
-  methods: {
-    switchSidebar() {
-      this.$emit('switchSidebar')
-    },
-    getBreadcrumb() {
-      // 获取路由对应title   && 存在返回右边，不存在返回左边
-      const matched = this.$route.matched.filter(item => item.meta && item.meta.title)
-      this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
-    }
-  }
+  name: 'Navbar'
 }
 </script>
-
-<style lang="scss">
-.navbar {
-  height: 50px;
-  -webkit-box-shadow: 0 1px 4px rgba(0,21,41,0.08);
-  box-shadow: 0 1px 4px rgba(0,21,41,0.08);
-  .sidebar-switch {
-    height: 100%;
-    width: 50px;
-    padding: 0 15px;
-    line-height: 50px;
-    float: left;
-    cursor: pointer;
-    i {
-      font-size: 22px;
-      line-height: 50px;
-    }
-  }
-  .el-breadcrumb {
-    float: left;
-    height: 100%;
-    line-height: 50px;
-  }
-  .nav-menu {
-    float: right;
-    cursor: pointer;
-    height: 50px;
-    line-height: 50px;
-    .avatar-wrapper {
-      display: flex;
-      align-items: center;
-    }
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 5px;
-    }
-  }
-}
-</style>
