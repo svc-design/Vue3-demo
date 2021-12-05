@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import ScrollPane from './ScrollPane.vue'
+import ScrollPane from './Scrollbar.vue'
 export default {
   name: 'Tabs',
   components: { ScrollPane }
