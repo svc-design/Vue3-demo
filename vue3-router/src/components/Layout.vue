@@ -35,6 +35,14 @@ export default {
 
 <style scoped>
 
+.el-row {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .el-aside  {
     width: auto;
     line-height: 150px;
@@ -49,7 +57,8 @@ export default {
     text-align: left;
     line-height: 30px;
     height: 60px;
-    overflow: hidden;
+    padding-left: 1px;
+    padding-right: 1px;
     position: relative;
     -webkit-box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
     border-bottom: 1px solid #d8dce5;
