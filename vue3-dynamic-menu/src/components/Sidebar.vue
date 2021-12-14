@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col>
-      <el-menu default-active="1" 
+      <el-menu default-active="/home" 
                class="el-menu-vertical-demo" 
                :collapse=false 
                :router="true"

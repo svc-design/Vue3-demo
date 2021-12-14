@@ -3,19 +3,31 @@ import { createRouter, createWebHistory } from 'vue-router'
 export const routes = [
 	{
 		path: '/index',
-		component: () => import("@/components/Layout.vue")
+		component: () => import("@/components/Layout.vue"),
+		meta: {
+			name: 'index'
+		}
 	},
 	{
 		path: '/echart',
-		component: () => import("@/pages/echart.vue")
+		component: () => import("@/pages/echart.vue"),
+		meta: {
+			name: 'echart'		
+		}
 	},
 	{
 		 path: '/about',
-		 component: () => import("@/pages/about.vue")
+		 component: () => import("@/pages/about.vue"),
+		 meta: {
+			 name: 'about'
+		 }
 	}, 
 	{
 		path: '/button',
-		component: () => import("@/pages/button.vue")
+		component: () => import("@/pages/button.vue"),
+		meta: {
+			name: 'button'
+		}
 	}
 ]
 
