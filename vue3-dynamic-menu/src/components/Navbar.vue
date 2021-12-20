@@ -29,7 +29,7 @@
         <el-dropdown-menu>
           <el-dropdown-item command="a">通知:xxx</el-dropdown-item>
           <el-dropdown-item command="a">进度:xxx</el-dropdown-item>
-          <el-dropdown-item command="a">代办:xxx</el-dropdown-item>
+          <el-dropdown-item command="a">待办:xxx</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
