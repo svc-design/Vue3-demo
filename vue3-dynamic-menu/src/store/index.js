@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import module_tabs from './module_tabs'
-import module_side_menus from './module_side_menus'
+import module_menus from './module_side_menus';
 
 const store = createStore ({
     state: {
@@ -36,7 +36,7 @@ const store = createStore ({
    },
    modules: {
      tabs: module_tabs,
-     side_menus: module_side_menus
+     menus: module_menus
    }
 })
 

@@ -1,5 +1,5 @@
 const module_side_menus = {
-  namespaced: true, // 需要开启命名空间 识别这个module
+  namespaced: true,
   state: {
     actived_index: '/home',
     items: [

@@ -41,11 +41,13 @@
   export default {
   name: "Sidebar",
   setup() {
+
+
     function handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      console.log(key, keyPath)
     }
     function handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      console.log(key, keyPath)
     }
     return {
       handleOpen,
